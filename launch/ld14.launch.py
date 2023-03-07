@@ -32,7 +32,7 @@ def generate_launch_description():
         {'product_name': 'LDLiDAR_LD14'},
         {'laser_scan_topic_name': 'scan'},
         {'point_cloud_2d_topic_name': 'pointcloud2d'},
-        {'frame_id': 'base_laser'},
+        {'frame_id': 'laser_frame'},
         {'port_name': '/dev/ttyUSB0'},
         {'serial_baudrate' : 115200},
         {'laser_scan_dir': True},
@@ -55,6 +55,6 @@ def generate_launch_description():
   ld = LaunchDescription()
 
   ld.add_action(ldlidar_node)
-  ld.add_action(base_link_to_laser_tf_node)
+  #ld.add_action(base_link_to_laser_tf_node)
 
   return ld
