@@ -118,10 +118,10 @@ int main(int argc, char **argv) {
 
   // create ldlidar data topic and publisher
   rclcpp::Publisher<sensor_msgs::msg::LaserScan>::SharedPtr lidar_pub_laserscan = 
-      node->create_publisher<sensor_msgs::msg::LaserScan>(laser_scan_topic_name, 10);
+      node->create_publisher<sensor_msgs::msg::LaserScan>(laser_scan_topic_name, 100);
   
   rclcpp::Publisher<sensor_msgs::msg::PointCloud>::SharedPtr lidar_pub_pointcloud = 
-      node->create_publisher<sensor_msgs::msg::PointCloud>(point_cloud_2d_topic_name, 10);
+      node->create_publisher<sensor_msgs::msg::PointCloud>(point_cloud_2d_topic_name, 100);
 
   rclcpp::WallRate r(6); //Hz
 
